@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Caffeine_Coders_Co
+spec:
+  type: team
+  children: []
+  profile:
+    displayName: Caffeine_Coders_Co
+    email: team-a@CaffeineCodersCo.com
+    picture: https://github.com/curtissearle/Caffeine_Coders_Co/blob/main/Roasted_coffee_beans.jpg?raw=true
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: CappuccinoColin
+spec:
+  profile:
+    displayName: Cappuccino Colin
+    jobTitle: Senior Software Engineer
+    email: CappuccinoColin@example.com
+  memberOf: [Caffeine_Coders_Co]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: JavaJill
+spec:
+  profile:
+    displayName: Java Jill
+    jobTitle: Lead Software Engineer
+    email: JavaJill@redbull.com
+  memberOf: [Caffeine_Coders_Co]
