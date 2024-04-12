@@ -1,0 +1,82 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: Roasted_REST_API
+  description: A backend API service
+  annotations:
+    github.com/project-slug: curtissearle/Caffeine_Coders_Co
+  tags:
+    - python
+  links:
+    - url: https://www.helloworld.org/
+      title: Production
+      icon: dashboard
+      type: dashboard
+    - url: https://www.helloworld.org/
+      title: Development
+      icon: dashboard
+      type: dashboard
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/Caffeine_Coders_Co
+  providesApi:
+    - Roasted_REST_API
+  definition:
+    $text: ./swagger.json
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: Brew_Backend
+  description: A auth service
+  annotations:
+    github.com/project-slug: curtissearle/Caffeine_Coders_Co
+  tags:
+    - python
+  links:
+    - url: https://www.helloworld.org/
+      title: Production
+      icon: dashboard
+      type: dashboard
+    - url: https://www.helloworld.org/
+      title: Development
+      icon: dashboard
+      type: dashboard
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/Caffeine_Coders_Co
+  providesApi:
+    - Brew_Backend
+  definition:
+    $text: ./swagger.json
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Espresso_UI
+  description: A frontend utilising an API
+  annotations:
+    github.com/project-slug: curtissearle/Caffeine_Coders_Co
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - javascript
+  links:
+    - url: https://www.helloworld.org/
+      title: Production
+      icon: dashboard
+      type: dashboard
+    - url: https://www.helloworld.org/
+      title: Development
+      icon: dashboard
+      type: dashboard
+spec:
+  type: website
+  lifecycle: production
+  owner: group:default/Caffeine_Coders_Co
+  dependsOn:
+    - api:Roasted_REST_API
+    - api:Brew_Backend
+    
+
