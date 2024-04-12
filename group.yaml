@@ -2,6 +2,11 @@ apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
   name: Caffeine_Coders_Co
+  links:
+    - url: https://en.wikipedia.org/wiki/Coffee
+      title: Team Jira Board
+      icon: dashboard
+      type: dashboard
 spec:
   type: team
   children: []
@@ -31,3 +36,28 @@ spec:
     jobTitle: Lead Software Engineer
     email: JavaJill@redbull.com
   memberOf: [Caffeine_Coders_Co]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: CortadoCarter
+spec:
+  profile:
+    displayName: Cortado Carter
+    jobTitle: Software Engineer
+    email: CortadoCarter@redbull.com
+  memberOf: [Caffeine_Coders_Co]
+---
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: MochaMolly
+spec:
+  profile:
+    displayName: Mocha Molly
+    jobTitle: Software Engineer
+    email: MochaMolly@redbull.com
+  memberOf: [Caffeine_Coders_Co]
+
+
+  
