@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: Squad_1
+  name: Frontend_Squad
   links:
     - url: https://en.wikipedia.org/wiki/Coffee
       title: Team Jira Board
@@ -11,14 +11,14 @@ spec:
   type: team
   children: []
   profile:
-    displayName: Squad_1
+    displayName: Frontend_Squad
     email: Squad_1@CaffeineCodersCo.com
     picture: https://github.com/curtissearle/Caffeine_Coders_Co/blob/main/Roasted_coffee_beans.jpg?raw=true
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: Squad_2
+  name: API_Squad
   links:
     - url: https://en.wikipedia.org/wiki/Coffee
       title: Team Jira Board
@@ -28,7 +28,7 @@ spec:
   type: team
   children: []
   profile:
-    displayName: Squad_2
+    displayName: API_Squad
     email: Squad_2@CaffeineCodersCo.com
     picture: https://github.com/curtissearle/Caffeine_Coders_Co/blob/main/Roasted_coffee_beans.jpg?raw=true
 ---
@@ -41,7 +41,7 @@ spec:
     displayName: Cappuccino Colin
     jobTitle: Senior Software Engineer
     email: CappuccinoColin@example.com
-  memberOf: [Squad_1]
+  memberOf: [Frontend_Squad]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -52,7 +52,7 @@ spec:
     displayName: Java Jill
     jobTitle: Lead Software Engineer
     email: JavaJill@redbull.com
-  memberOf: [Squad_1]
+  memberOf: [Frontend_Squad]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -63,7 +63,7 @@ spec:
     displayName: Cortado Carter
     jobTitle: Software Engineer
     email: CortadoCarter@redbull.com
-  memberOf: [Squad_2]
+  memberOf: [API_Squad]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -74,7 +74,7 @@ spec:
     displayName: Mocha Molly
     jobTitle: Software Engineer
     email: MochaMolly@redbull.com
-  memberOf: [Squad_2]
+  memberOf: [API_Squad]
 
 
   
