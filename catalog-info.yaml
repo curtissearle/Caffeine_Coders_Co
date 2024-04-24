@@ -113,7 +113,6 @@ metadata:
   description: A hosted support portal
   annotations:
     github.com/project-slug: curtissearle/Caffeine_Coders_Co
-    backstage.io/techdocs-ref: dir:.
   tags:
     - dashboard
   links:
@@ -137,6 +136,7 @@ metadata:
   description: A frontend utilising an API
   annotations:
     github.com/project-slug: curtissearle/Caffeine_Coders_Co
+    backstage.io/techdocs-ref: dir:.
   tags:
     - javascript
   links:
