@@ -41,7 +41,7 @@ spec:
     displayName: Cappuccino Colin
     jobTitle: Senior Software Engineer
     email: CappuccinoColin@example.com
-  memberOf: [Caffeine_Coders_Co]
+  memberOf: [Squad_1]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -52,7 +52,7 @@ spec:
     displayName: Java Jill
     jobTitle: Lead Software Engineer
     email: JavaJill@redbull.com
-  memberOf: [Caffeine_Coders_Co]
+  memberOf: [Squad_1]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
