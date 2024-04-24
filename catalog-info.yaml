@@ -19,7 +19,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: group:default/Squad_1
+  owner: group:default/API_Squad
   providesApi:
     - backend_REST_API
   definition:
@@ -46,7 +46,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: group:default/Squad_1
+  owner: group:default/API_Squad
   providesApi:
     - authentication_service
   definition:
@@ -73,7 +73,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: group:default/Squad_2
+  owner: group:default/API_Squad
   providesApi:
     - Brew_Backend
   definition:
@@ -100,7 +100,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: group:default/Squad_2
+  owner: group:default/API_Squad
   providesApi:
     - payment_service
   definition:
@@ -128,7 +128,7 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: group:default/Squad_1
+  owner: group:default/Frontend_Squad
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -137,7 +137,6 @@ metadata:
   description: A frontend utilising an API
   annotations:
     github.com/project-slug: curtissearle/Caffeine_Coders_Co
-    backstage.io/techdocs-ref: dir:.
   tags:
     - javascript
   links:
@@ -145,14 +144,10 @@ metadata:
       title: Production
       icon: dashboard
       type: dashboard
-    - url: https://www.helloworld.org/
-      title: Development
-      icon: dashboard
-      type: dashboard
 spec:
   type: website
   lifecycle: production
-  owner: group:default/Squad_1
+  owner: group:default/Frontend_Squad
   dependsOn:
     - api:backend_REST_API
     - api:authentication_service
