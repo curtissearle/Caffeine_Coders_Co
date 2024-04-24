@@ -149,8 +149,9 @@ spec:
   lifecycle: production
   owner: group:default/Frontend_Squad
   dependsOn:
-    - api:backend_REST_API
+    - api:order_service
     - api:authentication_service
+    - api:logging_service
     - api:payment_service
     - component:Support
 
