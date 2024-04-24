@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
-  name: Caffeine_Coders_Co
+  name: Squad_1
   links:
     - url: https://en.wikipedia.org/wiki/Coffee
       title: Team Jira Board
@@ -11,8 +11,25 @@ spec:
   type: team
   children: []
   profile:
-    displayName: Caffeine_Coders_Co
-    email: team-a@CaffeineCodersCo.com
+    displayName: Squad_1
+    email: Squad_1@CaffeineCodersCo.com
+    picture: https://github.com/curtissearle/Caffeine_Coders_Co/blob/main/Roasted_coffee_beans.jpg?raw=true
+---
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Squad_2
+  links:
+    - url: https://en.wikipedia.org/wiki/Coffee
+      title: Team Jira Board
+      icon: dashboard
+      type: dashboard
+spec:
+  type: team
+  children: []
+  profile:
+    displayName: Squad_2
+    email: Squad_2@CaffeineCodersCo.com
     picture: https://github.com/curtissearle/Caffeine_Coders_Co/blob/main/Roasted_coffee_beans.jpg?raw=true
 ---
 apiVersion: backstage.io/v1alpha1
@@ -46,7 +63,7 @@ spec:
     displayName: Cortado Carter
     jobTitle: Software Engineer
     email: CortadoCarter@redbull.com
-  memberOf: [Caffeine_Coders_Co]
+  memberOf: [Squad_2]
 ---
 apiVersion: backstage.io/v1alpha1
 kind: User
@@ -57,7 +74,7 @@ spec:
     displayName: Mocha Molly
     jobTitle: Software Engineer
     email: MochaMolly@redbull.com
-  memberOf: [Caffeine_Coders_Co]
+  memberOf: [Squad_2]
 
 
   
