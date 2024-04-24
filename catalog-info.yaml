@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: Roasted_REST_API
+  name: backend_REST_API
   description: A backend API service
   annotations:
     github.com/project-slug: curtissearle/Caffeine_Coders_Co
@@ -19,9 +19,36 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: group:default/Caffeine_Coders_Co
+  owner: group:default/Squad_1
   providesApi:
-    - Roasted_REST_API
+    - backend_REST_API
+  definition:
+    $text: ./swagger.json
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: authentication_service
+  description: A auth service
+  annotations:
+    github.com/project-slug: curtissearle/Caffeine_Coders_Co
+  tags:
+    - python
+  links:
+    - url: https://www.helloworld.org/
+      title: Production
+      icon: dashboard
+      type: dashboard
+    - url: https://www.helloworld.org/
+      title: Development
+      icon: dashboard
+      type: dashboard
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/Squad_1
+  providesApi:
+    - authentication_service
   definition:
     $text: ./swagger.json
 ---
@@ -46,11 +73,62 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: group:default/Caffeine_Coders_Co
+  owner: group:default/Squad_2
   providesApi:
     - Brew_Backend
   definition:
     $text: ./swagger.json
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: payment_service
+  description: A payment service
+  annotations:
+    github.com/project-slug: curtissearle/Caffeine_Coders_Co
+  tags:
+    - python
+  links:
+    - url: https://www.helloworld.org/
+      title: Production
+      icon: dashboard
+      type: dashboard
+    - url: https://www.helloworld.org/
+      title: Development
+      icon: dashboard
+      type: dashboard
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:default/Squad_2
+  providesApi:
+    - payment_service
+  definition:
+    $text: ./swagger.json
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Support
+  description: A hosted support portal
+  annotations:
+    github.com/project-slug: curtissearle/Caffeine_Coders_Co
+    backstage.io/techdocs-ref: dir:.
+  tags:
+    - javascript
+  links:
+    - url: https://www.helloworld.org/
+      title: Production
+      icon: dashboard
+      type: dashboard
+    - url: https://www.helloworld.org/
+      title: Development
+      icon: dashboard
+      type: dashboard
+spec:
+  type: website
+  lifecycle: production
+  owner: group:default/Squad_1
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -74,9 +152,12 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: group:default/Caffeine_Coders_Co
+  owner: group:default/Squad_1
   dependsOn:
-    - api:Roasted_REST_API
-    - api:Brew_Backend
+    - api:backend_REST_API
+    - api:authentication_service
+    - api:payment_service
+    - component:Support
+
     
 
