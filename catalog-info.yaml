@@ -1,8 +1,8 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: backend_REST_API
-  description: A backend API service
+  name: order_service
+  description: handles customer orders
   annotations:
     github.com/project-slug: curtissearle/Caffeine_Coders_Co
   tags:
@@ -21,7 +21,7 @@ spec:
   lifecycle: production
   owner: group:default/API_Squad
   providesApi:
-    - backend_REST_API
+    - order_service
   definition:
     $text: ./swagger.json
 ---
@@ -55,12 +55,12 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: Brew_Backend
-  description: A auth service
+  name: logging_service
+  description: A log service
   annotations:
     github.com/project-slug: curtissearle/Caffeine_Coders_Co
   tags:
-    - python
+    - javascript
   links:
     - url: https://www.helloworld.org/
       title: Production
@@ -75,7 +75,7 @@ spec:
   lifecycle: production
   owner: group:default/API_Squad
   providesApi:
-    - Brew_Backend
+    - logging_service
   definition:
     $text: ./swagger.json
 ---
@@ -115,7 +115,7 @@ metadata:
     github.com/project-slug: curtissearle/Caffeine_Coders_Co
     backstage.io/techdocs-ref: dir:.
   tags:
-    - javascript
+    - dashboard
   links:
     - url: https://www.helloworld.org/
       title: Production
