@@ -137,6 +137,7 @@ metadata:
   annotations:
     github.com/project-slug: curtissearle/Caffeine_Coders_Co
     backstage.io/techdocs-ref: dir:.
+    jira/project-key: VEND
   tags:
     - javascript
   links:
