@@ -155,6 +155,34 @@ spec:
     - api:logging_service
     - api:payment_service
     - component:Support
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: New_Website
+  description: Website V2
+  annotations:
+    github.com/project-slug: curtissearle/Caffeine_Coders_Co
+    backstage.io/techdocs-ref: dir:.
+    jira/project-key: VEND
+  tags:
+    - javascript
+    - react
+  links:
+    - url: https://www.helloworld.org/
+      title: Production
+      icon: dashboard
+      type: dashboard
+spec:
+  type: website
+  lifecycle: production
+  owner: group:default/Frontend_Squad
+  dependsOn:
+    - api:order_service
+    - api:authentication_service
+    - api:logging_service
+    - api:payment_service
+    - component:Support
 
     
 
