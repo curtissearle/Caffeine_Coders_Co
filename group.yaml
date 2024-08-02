@@ -40,7 +40,7 @@ spec:
   profile:
     displayName: Cappuccino Colin
     jobTitle: Senior Software Engineer
-    email: CappuccinoColin@example.com
+    email: CappuccinoColin@CaffeineCodersCo.com
   memberOf: [Frontend_Squad]
 ---
 apiVersion: backstage.io/v1alpha1
@@ -62,7 +62,7 @@ spec:
   profile:
     displayName: Cortado Carter
     jobTitle: Software Engineer
-    email: CortadoCarter@redbull.com
+    email: CortadoCarter@CaffeineCodersCo.com
   memberOf: [API_Squad]
 ---
 apiVersion: backstage.io/v1alpha1
@@ -73,7 +73,7 @@ spec:
   profile:
     displayName: Mocha Molly
     jobTitle: Software Engineer
-    email: MochaMolly@redbull.com
+    email: MochaMolly@CaffeineCodersCo.com
   memberOf: [API_Squad]
 
 
