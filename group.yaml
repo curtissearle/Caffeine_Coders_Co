@@ -51,7 +51,7 @@ spec:
   profile:
     displayName: Java Jill
     jobTitle: Lead Software Engineer
-    email: JavaJill@redbull.com
+    email: JavaJill@CaffeineCodersCo.com
   memberOf: [Frontend_Squad]
 ---
 apiVersion: backstage.io/v1alpha1
